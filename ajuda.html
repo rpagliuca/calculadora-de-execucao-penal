@@ -1,0 +1,655 @@
+
+<!-- saved from url=(0056)http://www.cnj.jus.br/images/calculadorapenal/ajuda.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Calculadora de Execução Penal</title>
+
+		<style type="text/css">
+			.titulo 
+			{			
+				font-weight: bold;			
+				font-family: verdana;
+				font-size: 16px;
+				text-align:left;
+				color: #3E6A51;
+				border-top-style: none;
+				border-left-style: none;
+				border-rigth-style: none;
+				border-bottom-style: solid;
+				border-bottom-color: #666666;
+				border-bottom-width: 1px;
+
+			}
+			.subtitulo 
+			{
+				font-weight: bold;						
+				font-family: verdana;
+				font-size: 12px;
+				color: #000000;
+				text-align:left;
+
+			}
+			.conteudo 
+			{
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				text-align:left;
+			}
+		</style>	
+		<script>
+		function mostrarOculto(nomeElemento)
+		{			
+			if (document.getElementById(nomeElemento).style.display == "none")
+			{
+				document.getElementById(nomeElemento).style.display = "block";
+			}
+			else
+			{
+				document.getElementById(nomeElemento).style.display = "none";
+			}
+		}
+		</script>
+
+	</head>
+	<body>
+		<table>
+			<tbody><tr>
+				<td class="titulo">OBJETIVO</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Esta calculadora de execução penal foi desenvolvida pelo Departamento de Informática do Tribunal de Justiça do Estado do Paraná com a colaboração e alterações do grupo de trabalho convocado pelo Departamento de Monitoramento e Fiscalização do Sistema Carcerário do Conselho Nacional de Justiça, com a finalidade de facilitar a elaboração dos cálculos de prazos para benefícios e liquidação de penas das Varas de Execuções Penais.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">DADOS GERAIS</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Execução número</td>
+			</tr>
+			<tr>
+				<td class="conteudo">É o número do Processo de Execução Penal, no qual estão cadastradas todas as condenações do apenado.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Nome do Sentenciado</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Nome completo do sentenciado.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Penas</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Penas impostas para o réu.<br>Podem ser adicionadas tantas condenações quantas forem necessárias.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			
+			<tr>
+				<td class="subtitulo">Detrações</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Art. 42 do Código Penal - Computam-se, na pena privativa de liberdade e na medida de segurança, o tempo de prisão provisória, no Brasil ou no estrangeiro, o de prisão administrativa e o de internação em qualquer dos estabelecimentos referidos no artigo anterior.</td>
+			</tr>			
+			<tr>
+				<td class="conteudo">Informar períodos de recolhimento cautelar anteriores ao efetivo início de cumprimento.<br>Atenção: o período a ser informado deverá ser aquele que efetivamente ficou preso.<br>Exemplo: data da prisão em flagrante/ data que saiu em liberdade provisória.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Data da Prisão Definitiva</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Data em que o sentenciado iniciou efetivamente o cumprimento da pena no regime aberto ou a data da prisão definitiva nos regimes semiaberto e fechado.<br><b>Obs.:</b> Eventuais períodos de recolhimento cautelar anteriores ao efetivo início de cumprimento deverão ser computados como detração.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Interrupções</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Informar os períodos de interrupção da pena posteriores à data de início de seu cumprimento com a data início e fim dos mesmos.<br>Exemplos: período foragido (fuga/recaptura), período de livramento condicional perdido (liberdade do LC/prisão), etc.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Remições</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Informar os dias efetivamente declarados remidos por trabalho ou estudo.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">PARA PROGRESSÃO DE REGIME</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Regime</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Selecionar um dos itens: SEMIABERTO ou ABERTO, indicando qual a próxima progressão a ser obtida pelo sentenciado.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Considerar Remições para a Redução da Pena Imposta</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Se selecionado, a remição será reduzida do total da Pena Imposta e deste resultado será calculado o prazo para a progressão de regime.<br><span style="color:blue">Exemplo: Data-base=01/01/2000; Pena Total=4a6m0d; Total dias remidos=180d.<br>Fração: (4a6m0d - 180d) * 1/6 = 4a0m0d * 1/6 (Comum) = 0a8m0d<br>Data do requisito temporal: 01/01/2000+0a8m0d = 30/08/2000 </span><br><br>Se desmarcado, será calculada a data da progressão de regime e deste resultado serão descontados os dias remidos.<br><span style="color:blue">Exemplo: Data-base=01/01/2000; Pena Total=4a6m0d; Total dias remidos=180d.<br>Fração: (4a6m0d * 1/6 (Comum)) = 0a9m0d <br>Data do requisito temporal: 01/01/2000+0a9m0d = 01/10/2000-180d = 03/04/2000</span></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Data-base</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Informar a data base a ser levada em consideração para o cálculo da progressão de regime.<br>Se for a primeira progressão, a data base será a data do início do cumprimento da pena. Deste modo os cálculos são feitos sobre o total de cada pena;<br>A partir da segunda progressão o sentenciado terá que cumprir a fração pertinente (1/6 ou 2/5 ou 3/5, conforme o crime) do restante da pena;<br>Se o sentenciado progredir do regime fechado para o semiaberto, a data base para o aberto será a data da decisão de progressão para o semiaberto (salvo se for registrada alguma fuga ou outro evento que modifique o cumprimento da pena).<br>De regra, quando houver regressão ou fixação de regime, a data base será a da prisão que ensejou a mudança para o regime mais gravoso no cumprimento da pena.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Pena cumprida até a Data Base</td>
+			</tr>
+			<tr>
+				<td class="conteudo">O sistema calculará automaticamente tempo de pena já cumprida em anos, meses e dias, computando os períodos de detração, interrupção e remição.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Fração - Tipo de condenação</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Selecionar a fração a ser considerada para a Progressão de Regime e informar o tempo de condenação para cada fração em anos, meses e dias.<br>- 1/6 da pena quando o crime é considerado comum ou hediondo com delito cometido antes de 29/03/2007.<br>- 2/5 da pena quando o crime é considerado hediondo e o sentenciado for considerado PRIMÁRIO com delito cometido a partir de 29/03/2007.<br>- 3/5 da pena quando o crime é considerado hediondo e o sentenciado for considerado REINCIDENTE com delito cometido a partir de 29/03/2007.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">PARA LIVRAMENTO CONDICIONAL</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Data-base</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Informar a data base a ser levada em consideração para o cálculo do livramento condicional. Deve ser informada a data da primeira condenação.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Fração - Tipo de condenação</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Selecionar a fração a ser considerada para o livramento condicional e informar o tempo de condenação para cada fração em anos, meses e dias.<br>- 1/3 da pena quando o sentenciado é PRIMÁRIO e o crime é considerado comum;<br>- 1/2 da pena quando o sentenciado é REINCIDENTE e o crime é considerado comum;<br>- 2/3 da pena quando o crime é considerado hediondo;<br>- 1/1 da pena quando o sentenciado é REINCIDENTE ESPECÍFICO, ou seja, reincidente em crimes considerados hediondos ele não tem direito a Livramento Condicional;<br>- 1/1 da pena quando o sentenciado tem a revogação do Livramento Condicional na respectiva condenação.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">OUTROS CAMPOS</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Observação</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Campo texto para incluir alguma informação adicional.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Data</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Data em que o relatório de cálculo de pena foi elaborado.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Elaborado Por</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Nome do responsável por elaborar o relatório com o cálculo de pena.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Pena Total</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Informar o somatório de penas, já considerando a nova pena da comutação</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">OPÇÕES</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Calcular Pena</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Clicar neste link para que o cálculo seja realizado.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Limpar Campos</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Clicar neste botão para limpar os campos.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Imprimir</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Clicar no link Imprimir.<br>É possível alterar a impressora de destino do relatório na tela de impressão selecionando a impressora desejada na tela que se abre.<br>Para alterar as opções de cabeçalho e rodapé que são apresentados na folha impressa siga os passos abaixo:<br>- Se estiver utilizando o navegador Mozilla Firefox acesse o menu "Arquivo" / "Configurar Página". Na tela que abre clique na aba "Margens" e após selecione na seção "Cabeçalho e Rodapé" quais os itens devem ser apresentados ou "-- em branco --" caso não seja necessário apresentar nenhuma informação. Clique no botão "OK" para confirmar a alteração.<br>- Se estiver utilizando o navegador Internet Explorer acesse o menu "Arquivo" / "Configurar Página". Na tela que abre selecione na seção "Cabeçalho e Rodapé" quais os itens devem ser apresentados ou "- Vazio -" caso não seja necessário apresentar nenhuma informação. Clique no botão "OK" para confirmar a alteração.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Ajuda</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Clicar neste botão para visualizar a ajuda.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">EXEMPLOS DE CÁLCULO</td>
+			</tr>
+				
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="subtitulo">Exemplo 1 - <a href="javascript:mostrarOculto(&#39;exemplo1&#39;)">Exibir/Ocultar</a></td>				
+			</tr>
+			<tr>	
+				<td class="conteudo">
+				<div id="exemplo1" style="display:none">
+					Crime: Art. 157, Parágrafo 2o, Inc. I - Roubo qualificado pelo emprego de arma de fogo. Trata-se de um crime comum.<br>
+					Pena cominada: 8 anos.<br>
+					Data do fato: 26.05.2006 (Preso em flagrante).<br>
+					Liberdade Provisória: 13.10.2006.<br>
+					Prisão Definitiva: 09.02.2007 (Mandado de prisão em virtude de condenação definitiva).<br><br>
+					<b>- Cálculo da Progressão de Regime:</b><br>
+					Fração 1/6 -  art. 112 da Lei de Execuções Penais.<br>
+					Cálculo: 8anos x 1/6 = 1 ano e 4 meses<br>
+					Data-base: 26.05.2006<br>
+					Por quê? RHC 92872 (Min. Cármen Lúcia) - "A jurisprudência deste Supremo Tribunal não exige o trânsito em julgado da condenação para que seja possível a progressão de regime". <br>
+					<span style="color:blue">
+					Extrato do Cálculo:<br>
+					09.02.2007 (data-base=última falta grave=data do fato)<br>
+					+ 1ano e 4meses (Resultado da fração)<br>
+					- 4meses e 18dias (Liberdade Provisória)<br>
+					- 1dia<br>
+					<b>= 21.01.2008</b> (Data do requisito temporal para a Progressão de Regime)
+					</span>
+					<br><br>					
+					
+					<b>- Cálculo do Livramento Condicional:</b><br>
+					Fração 1/3 -  art. 83, inc I, do Código Penal.<br>
+					Cálculo: 8anos x 1/3 = 2anos e 8meses<br>
+					Data-base: 09.02.2007<br>
+					Por quê?	<br>
+					Súmula 441 do Superior Tribunal de Justiça: "A falta grave não interrompe o prazo para obtenção de livramento condicional".<br>
+					HC 100062 (Min. Marco Aurélio) - "Ante a exigência de ter-se comportamento satisfatório durante a execução da pena para chegar-se ao livramento condicional - inciso III do artigo 83 do Código Penal -, ocorre como consequência do cometimento de falta grave nova contagem do período de cumprimento da pena previsto no citado artigo".<br>
+					<span style="color:blue">
+					Extrato do Cálculo:<br>
+					09.02.2007 (data-base=data da prisão definitiva)<br>
+					+ 2anos e 8meses ( resultado da fração)<br>
+					- 4meses e 18 dias (Detração)<br>
+					- 1dia<br>
+					<b>= 20.05.2009</b> (Data do requisito temporal para o Livramento Condicional)
+					</span>
+					<br><br>
+					
+					<b>- Cálculo do Término da Pena:</b><br>
+					<span style="color:blue">
+					Extrato do Cálculo:<br>
+					26.05.2006 (Data de Início de Cumprimento)<br>
+					+8anos (Pena Total)<br>
+					- 4meses e 18dias (Detração)<br>
+					- 1dia<br>
+					<b>= 20.09.2014</b>
+					</span>
+					<br><br>
+				</div>
+				</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr>
+				<td class="subtitulo">Exemplo 2 - <a href="javascript:mostrarOculto(&#39;exemplo2&#39;)">Exibir/Ocultar</a></td>				
+			</tr>
+			<tr>	
+				<td class="conteudo">
+				<div id="exemplo2" style="display:none">
+				Crime: Art. 157, Parágrafo 2o, Inc. I e II - Roubo qualificado pelo emprego de arma de fogo e pelo concurso de pessoas.<br>
+				Trata-se de um crime comum.<br>
+				Pena cominada: 12 anos e 4 meses.<br>
+				Data do fato: 26.11.2009 (Preso em flagrante).<br>
+				Data da Prisão Definitiva: 26.11.2009<br>
+				Remição: 65dias (2meses e 5 dias)<br><br>
+				<b>- Cálculo da Progressão de Regime:</b><br>
+				Fração 1/6 -  art. 112 da Lei de Execuções Penais.<br>
+				Cálculo: 12anos e 4meses x 1/6 =2anos e 20dias<br>
+				Data-base: 26.11.2009<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				26.11.2009 (data-base= falta grave=data do fato=prisão definitiva)<br>
+				 + 2anos e 20dias ( resultado da fração)<br>
+				- 2meses e 5 dias (Remição)<br>
+				- 1dia<br>
+				<b>= 11.10.2011</b> (Data do requisito temporal para a Progressão de Regime)
+				</span>
+				<br><br>
+
+				<b>- Cálculo do Livramento Condicional:</b><br>
+				Fração 1/3 -  art. 83, inc I, do Código Penal.<br>
+				Cálculo: 12anos e 4 meses x 1/3 = 4anos, 1mês e 10dias<br>
+				Data-base: 26.11.2009<br>
+				
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				26.11.2009 (data-base=data da prisão definitiva)<br> 
+				+ 4anos, 1mês e 10 dias( resultado da fração)<br>
+				- 2meses e 5dias (Remição)<br>
+				- 1dia<br>
+				<b>= 31.10.2013</b> (Data do requisito temporal para o Livramento Condicional)<br>
+				</span>
+				<br><br>
+
+				<b>- Cálculo do Término da Pena:</b><br>
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				26.11.2009 (Data de Início de Cumprimento)<br>
+				+12anos e 4meses (Pena Total)<br>
+				- 2meses e 5dias (Detração)<br>
+				- 1dia<br>
+				<b>= 19.01.2022</b>
+				</span>
+				<br><br>
+
+				</div>
+				</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr>
+				<td class="subtitulo">Exemplo 3 - <a href="javascript:mostrarOculto(&#39;exemplo3&#39;)">Exibir/Ocultar</a></td>				
+			</tr>
+			<tr>	
+				<td class="conteudo">
+				<div id="exemplo3" style="display:none">
+				Crimes: 1) Art. 33, da Lei 11.343/06 - Tráfico de Drogas 2) Art. 35, da Lei 11.343/06 - Associação para o tráfico de Drogas<br>
+				Pena cominada:<br> 
+				Tráfico de Drogas (Crime Hediondo) - 6anos<br>
+				Associação para o Tráfico de Drogas (Crime comum) - 3 anos<br>
+				Data do fato: 30.11.2007 (Preso em flagrante).<br>
+				Data da Prisão Definitiva: 30.11.2007<br><br>
+
+				<b>- Cálculo da Progressão de Regime:</b><br>
+				Fração 1/6 do Crime Comum -  art. 112 da Lei de Execuções Penais.<br> 
+				Fração 2/5 do Crime Hediondo para apenados tecnicamente primário -  art. 2o, Parágrafo 2o, da Lei 8.072/90, Lei de Crimes Hediondos.<br>
+				Cálculo da fração:  2anos 10meses e 24dias<br>
+				3anos x 1/6 = 6meses<br>
+				6anos x 2/5 = 2anos 4meses e 24dias<br>
+				Data-base: 30.10.2007<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				30.10.2007 (data-base= falta grave=data do fato=prisão definitiva)<br>
+				+ 2anos, 10meses e 24dias ( resultado da fração)<br>
+				- 1dia<br>
+				<b>= 22.09.2010</b> (Data do requisito temporal para a Progressão de Regime)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Livramento Condicional:</b><br>
+				Fração 2/3 - Parágrafo único do art. 44 da Lei de Tráfico de Drogas - Lei no 11.343/06<br>
+				Cálculo: 9anos x 2/3 = 6anos<br>
+				Data-base: 30.10.2007<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				30.10.2007 (data-base=data da prisão definitiva)<br>
+				+ 6anos ( resultado da fração)<br>
+				- 1dia<br>
+				<b>= 29.10.2013</b> (Data do requisito temporal para o Livramento Condicional)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Término da Pena:</b><br>
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				30.10.2007 (Data de Início de Cumprimento)<br>
+				+9anos (Pena Total)<br>
+				- 1dia<br>
+				<b>= 29.10.2016</b>
+				</span><br><br>
+				</div>
+				</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td class="subtitulo">Exemplo 4 - <a href="javascript:mostrarOculto(&#39;exemplo4&#39;)">Exibir/Ocultar</a></td>				
+			</tr>
+			<tr>	
+				<td class="conteudo">
+				<div id="exemplo4" style="display:none">
+				Crimes: 1) Art. 155, Parágrafo 4o, inc. IV, do Código Penal - Furto; 2) Lei 11.343/06 - Tráfico de Drogas 3) Art. 35, da Lei 11.343/06 - Associação para o tráfico de Drogas<br>
+				Pena cominada:<br> 
+				Furto (Crime comum) - 4anos<br>
+				Tráfico de Drogas (Crime Hediondo) - 5anos<br>
+				Associação para o Tráfico de Drogas (Crime comum) - 3anos<br>
+				Data do fato do Furto: 10.01.2003 (Preso em flagrante).<br>
+				Liberdade provisória: 10.02.2003<br>
+				Data da Prisão Definitiva: 10.12.2003<br>
+				Data do fato dos crimes de tráfico de drogas e do crime de associação para o tráfico de drogas: 30.12.2006<br>
+				Fuga: 10.04.2004 à 30.12.2006<br>
+				Remição = 60 dias (2meses)<br><br>
+
+				<b>- Cálculo da Progressão de Regime:</b><br>
+				Fração 1/6 para os Crimes Comuns e para o Crime Hediondo antes de 29.03.2007<br>
+				Data-base: 30.12.2006<br>
+				Por quê?<br>
+				Pena cumprida até a data-base: 5meses e 2dias<br>
+				Restante da Pena: 11anos, 6meses e 28dias<br>
+				Cálculo da fração: 11anos, 6meses e 28dias x 1/6 = 1ano, 11meses e 4dias.<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				30.12.2006 (data-base= última falta grave=cometimento de novo crime)<br>
+				+ 1ano, 11meses, e 10dias ( resultado da fração)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (remição)<br>
+				- 1dia<br>
+				<b>= 09.09.2008</b> (Data do requisito temporal para a Progressão de Regime)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Livramento Condicional:</b><br>
+				Fração 2/3 - Parágrafo único do art. 44 da Lei de Tráfico de Drogas - Lei no 11.343/06<br>
+				Fração 1/3 - art. 83, inc I, do Código Penal. (Crime de furto)<br>
+				Cálculo:<br>
+				4anos x 1/3 = 1ano e 4meses<br>
+				8anos x 2/3 = 5anos e 4meses<br>
+				Data-base: 10.12.2003<br>
+				Por quê?<br>
+				Interrupção da Data-base do Crime Hediondo para o Livramento Condicional = 30.12.2006<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				30.12.2006 (início da condenação do crime hediondo)<br>
+				+ 6anos e 4meses (resultado da fração)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (remição)<br>
+				- 1dia<br>
+				<b>= 27.01.2013</b> (Data do requisito temporal para o Livramento Condicional)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Término da Pena:</b><br>
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				10.12.2003 (Data de Início de Cumprimento)<br>
+				+ 12anos (Pena Total)<br>
+				+ 2anos, 8meses e 20dias (Interrupção)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (Remição)<br>
+				- 1dia<br>
+				<b>= 29.05.2018</b><br>
+				</span><br><br>
+
+				</div>
+				</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td class="subtitulo">Exemplo 5 - <a href="javascript:mostrarOculto(&#39;exemplo5&#39;)">Exibir/Ocultar</a></td>
+			</tr>
+			<tr>	
+				<td class="conteudo">
+				<div id="exemplo5" style="display:none">
+				Crimes: 1) Art. 155, Parágrafo 4o, inc. IV, do Código Penal - Furto; 2) Lei 11.343/06 - Tráfico de Drogas 3) Art. 35, da Lei 11.343/06 - Associação para o tráfico de Drogas<br>
+				Pena cominada:<br>
+				Furto (Crime comum) - 4anos<br>
+				Tráfico de Drogas (Crime Hediondo) - 5anos<br>
+				Associação para o Tráfico de Drogas (Crime comum) - 3 anos<br>
+				Data do fato do Furto: 10.01.2003 (Preso em flagrante).<br>
+				Liberdade provisória: 10.02.2003<br>
+				Data da Prisão Definitiva: 10.12.2003<br>
+				Data do fato dos crimes de tráfico de drogas e do crime de associação para o tráfico de drogas: 01.05.2007<br>
+				Fuga: 10.04.2004 à 01.05.2007<br>
+				Remição = 60 dias (2meses)<br><br>
+
+
+				<b>- Cálculo da Progressão de Regime:</b><br>
+				Fração 1/6 para os Crimes Comuns<br>
+				Fração 3/5 para o Crime Hediondo, reconhecido a reincidência do apenado, após 29.03.2007<br>
+				Data-base: 01.05.2007<br>
+				Pena cumprida até a data-base: 5meses e 2dias (5meses e 1 dia do crime comum e 1 dia do crime hediondo)<br>
+				Restante da Pena: 11anos, 6meses e 28dias (6anos, 6meses e 29 dias do crime comum e 4anos, 11meses e 29dias do crime hediondo)<br>
+				Cálculo da fração:4anos, 1mês e 3dias<br>
+				4anos, 11meses e 29dias x 3/5 = 2anos, 11meses e 29dias<br>
+				6anos, 6meses e 29 dias x 1/6 = 1ano, 1mês e 4dias<br>
+				Data-base: 01.05.2007<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				01.05.2007 (data-base= última falta grave=cometimento de novo crime)<br>
+				+ 4anos, 1mês e 10dias ( resultado da fração)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (remição)<br>
+				- 1dia<br>
+				<b>= 10.03.2011</b> (Data do requisito temporal para a Progressão de Regime)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Livramento Condicional:</b><br>
+				Fração 2/3 - Parágrafo único do art. 44 da Lei de Tráfico de Drogas - Lei no 11.343/06<br>
+				Fração 1/3 - art. 83, inc I, do Código Penal. (Crime de furto)<br>
+				Cálculo:<br>
+				4anos x 1/3 = 1ano e 4meses<br>
+				8anos x 2/3 = 5anos e 4meses<br>
+				Data-base: 01.05.2007<br>
+				Por quê? Interrupção da Data-base do Crime Hediondo para o Livramento Condicional = 01.05.2007<br>
+
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				01.05.2007 (início da condenação do crime hediondo)<br>
+				+ 6anos e 4meses ( resultado da fração)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (remição)<br>
+				- 1dia<br>
+				<b>= 31.05.2013</b> (Data do requisito temporal para o Livramento Condicional)<br>
+				</span><br><br>
+				
+				<b>- Cálculo do Término da Pena:</b><br>
+				<span style="color:blue">
+				Extrato do Cálculo:<br>
+				10.12.2003 (Data de Início de Cumprimento)<br>
+				+ 12anos (Pena Total)<br>
+				+ 3anos e 21dias (Interrupção)<br>
+				- 1mês e 1dia (detração)<br>
+				- 2meses (Remição)<br>
+				- 1dia<br>
+				<b>= 30.09.2018</b><br>
+				</span><br><br>
+
+				</div>
+				</td>
+			</tr>	
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td class="titulo">DISPOSIÇÕES FINAIS</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Eventuais comutações deferidas na execução da pena, o preenchimento das condenações deverá ser feito com a pena já comutada.</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>	
+			<tr>
+				<td class="titulo">EQUIPE RESPONSÁVEL</td>
+			</tr>
+			<tr>
+				<td class="conteudo">Déborah Mesadri (Técnico Judiciário)<br>João Paulo Ribeiro do Nascimento (Analista de Sistemas)<br>Pablo Damasceno Rattes (Analista de Sistemas)<br>Wagner Paulo Martins (Analista de Sistemas)</td>
+			</tr>
+		</tbody></table>
+		
+	
+</body></html>
