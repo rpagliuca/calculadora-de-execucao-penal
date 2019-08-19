@@ -5239,12 +5239,11 @@
 					oDoc.write('</head><body onload=\'this.focus(); this.print();\'>');
 					oDoc.write('<table>');
 					oDoc.write('	<tr>');
-					oDoc.write('        <th rowspan="3"><img src="./images/logomarca_cnj.png" alt="Conselho Nacional de Justi\u00e7a"/></th>');
-					//oDoc.write('		<th nowrap rowspan="3"><img src="/image/image_gallery?img_id=1835785&amp;t=1289562184678" alt="Conselho Nacional de Justi\u00e7a" width="178" height="56"/></th>');
-					oDoc.write('		<td width="100%" style="font-size: 200%;text-align: center;font-weight: bold; font-family: calibri;">CALCULADORA DE EXECU\u00c7\u00c3O PENAL</td>');
+					oDoc.write('        <th rowspan="3"></th>');
+					oDoc.write('		<td width="100%" style="font-size: 200%;font-weight: bold; font-family: calibri;">CALCULADORA DE EXECU\u00c7\u00c3O PENAL</td>');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
-					oDoc.write('		<td style="font-size: 120%;text-align: center;font-weight: bold; font-family: calibri;">Departamento de Monitoramento e Fiscaliza\u00e7\u00e3o do Sistema<br>Carcer\u00e1rio e do Sistema de Execu\u00e7\u00e3o de Medidas Socioeducativas - DMF</td>');
+					oDoc.write('		<td style="font-size: 120%;text-align: center;font-weight: bold; font-family: calibri;"></td>');
 					oDoc.write('        <td width="100%">&nbsp;</td>');
 					oDoc.write('	</tr>');
 					oDoc.write('</table>');
@@ -5270,17 +5269,17 @@
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Execu\u00e7\u00e3o N&uacute;mero:</td>');
 					oDoc.write('		<td class="paragrafo02">' + calculadoraPenalObjeto.numeroExecucao + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Nome do Apenado:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + calculadoraPenalObjeto.nomeSentenciado + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Pena Total:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.calcularTotalPenaImposta()) + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 
 					oDoc.write('	<tr>');
@@ -5375,18 +5374,18 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Detra\u00e7\u00f5es:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirListaPeriodo(calculadoraPenalObjeto.listaDetracao) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Total Detra\u00e7\u00f5es:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.calcularTotalDetracao()) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Data de Pris\u00e3o Definitiva:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(calculadoraPenalObjeto.dataPrisaoDefinitiva) + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					var anoMesDiaTotalInterrupcao = calculadoraPenalObjeto.calcularTotalInterrupcao();
 					if (anoMesDiaTotalInterrupcao.ano != 0 || anoMesDiaTotalInterrupcao.mes != 0 || anoMesDiaTotalInterrupcao.dia != 0)
@@ -5394,13 +5393,13 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Interrup\u00e7\u00f5es:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirListaPeriodo(calculadoraPenalObjeto.listaInterrupcao) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Total Interrup\u00e7\u00f5es:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.calcularTotalInterrupcao()) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					var totalRemicao = calculadoraPenalObjeto.calcularTotalRemicao();
@@ -5410,7 +5409,7 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Total de Remi\u00e7\u00f5es:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + totalRemicao  + ' dia(s)</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 
@@ -5419,66 +5418,66 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Remi\u00e7\u00f5es para Progress\u00e3o:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + totalRemicaoParaProgressaoRegime  + ' dia(s)</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					oDoc.write('	<tr>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
+					oDoc.write('		');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="tituloSubBSecao" nowrap>PARA PROGRESS&Atilde;O DE REGIME</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Regime Atual:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + calculadoraPenalObjeto.tipoRegime  + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					if (calculadoraPenalObjeto.tipoRegime != 'Aberto')
 					{
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Data-base:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(calculadoraPenalObjeto.dataBasePR) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>Pena Cumprida = </td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('penaCumprida').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap></td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('detalheCalculoPenaCumprida').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap></td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('detalheCalculoPenaCumprida2').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Pena Cumprida At\u00e9 a Data-base:</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.calcularTotalPenaCumprida()) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>C\u00e1lculo da Fra\u00e7\u00e3o = </td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>(Pena Total - Pena Cumprida) * Fra\u00e7\u00e3o</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						if (calculadoraPenalObjeto.listaFracaoPenalPR[0].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalPR[0].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalPR[0].anoMesDiaPenaImposta.dia != 0)
 						{
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo01" nowrap>Comum (1/6):</td>');
 							oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalPR[0].anoMesDiaPenaImposta) + '</td>');
-							oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 							oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao16PR').innerHTML + '</td>');
-							oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 						}
 						if (calculadoraPenalObjeto.listaFracaoPenalPR[1].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalPR[1].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalPR[1].anoMesDiaPenaImposta.dia != 0)
@@ -5486,12 +5485,12 @@
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo01" nowrap>Hediondo (2/5):</td>');
 							oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalPR[1].anoMesDiaPenaImposta) + '</td>');
-							oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 							oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao25PR').innerHTML + '</td>');
-							oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 						}
 
@@ -5500,44 +5499,44 @@
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo01" nowrap>Hediondo Reincidente (3/5):</td>');
 							oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalPR[1].anoMesDiaPenaImposta) + '</td>');
-							oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 							oDoc.write('	<tr>');
 							oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 							oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao35PR').innerHTML  + '</td>');
-							oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+							oDoc.write('		');
 							oDoc.write('	</tr>');
 						}
 
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" style="font-size:10px;" nowrap>F\u00f3rmula do Requisito Temporal = </td>');
 						oDoc.write('		<td class="paragrafo04" style="font-size:10px;" nowrap>' + document.getElementById('formulaRequisitoPR').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('detalheCalculoPR').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo07" nowrap>Data do Requisito Temporal:</td>');
 						oDoc.write('		<td class="paragrafo08" nowrap>' + document.getElementById('dataRequisitoTemporalPR').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
+						oDoc.write('		');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}	
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="tituloSubBSecao" nowrap>PARA LIVRAMENTO CONDICIONAL</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01" nowrap>Data-base:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(calculadoraPenalObjeto.dataBaseLC) + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 
 					if (calculadoraPenalObjeto.listaFracaoPenalLC[0].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[0].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[0].anoMesDiaPenaImposta.dia != 0)
@@ -5545,12 +5544,12 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Comum Prim\u00e1rio(1/3):</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalLC[0].anoMesDiaPenaImposta) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao13LC').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					if (calculadoraPenalObjeto.listaFracaoPenalLC[1].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[1].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[1].anoMesDiaPenaImposta.dia != 0)
@@ -5558,12 +5557,12 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Comum Reincidente (1/2):</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalLC[1].anoMesDiaPenaImposta) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao12LC').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					if (calculadoraPenalObjeto.listaFracaoPenalLC[2].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[2].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[2].anoMesDiaPenaImposta.dia != 0)
@@ -5571,12 +5570,12 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Hediondo (2/3):</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalLC[2].anoMesDiaPenaImposta) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao23LC').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					if (calculadoraPenalObjeto.listaFracaoPenalLC[3].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[3].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[3].anoMesDiaPenaImposta.dia != 0)
@@ -5584,12 +5583,12 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Hediondo Reincidente (1/1):</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalLC[3].anoMesDiaPenaImposta) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracao11LC').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					if (calculadoraPenalObjeto.listaFracaoPenalLC[4].anoMesDiaPenaImposta.ano != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[4].anoMesDiaPenaImposta.mes != 0 || calculadoraPenalObjeto.listaFracaoPenalLC[4].anoMesDiaPenaImposta.dia != 0)
@@ -5597,75 +5596,75 @@
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo01" nowrap>Revoga\u00e7\u00e3o L.C. (1/1):</td>');
 						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPenalObjeto.listaFracaoPenalLC[4].anoMesDiaPenaImposta) + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 						oDoc.write('	<tr>');
 						oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 						oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('calculoFracaoRVLC').innerHTML + '</td>');
-						oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo03" style="font-size:10px;" nowrap>F\u00f3rmula do Requisito Temporal:</td>');
 					oDoc.write('		<td class="paragrafo04" style="font-size:10px;" nowrap>' + document.getElementById('formulaRequisitoLC').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 					oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('detalheCalculoLC').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo07" nowrap>Data do Requisito Temporal:</td>');
 					oDoc.write('		<td class="paragrafo08" nowrap>' + document.getElementById('dataRequisitoTemporalLC').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
+					oDoc.write('		');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="tituloSubBSecao" nowrap>T&Eacute;RMINO DA PENA</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo03" style="font-size:10px;" nowrap>F\u00f3rmula do Requisito Temporal = </td>');
 					oDoc.write('		<td class="paragrafo04" style="font-size:10px;" nowrap>' + document.getElementById('formulaRequisitoTerminoPena').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo03" nowrap>&nbsp;</td>');
 					oDoc.write('		<td class="paragrafo04" nowrap>' + document.getElementById('detalheCalculoTerminoPena').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo04">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo07" nowrap>Data do T\u00e9rmino da Pena:</td>');
 					oDoc.write('		<td class="paragrafo08" nowrap>' + document.getElementById('dataProvavelTerminoPena').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo07" nowrap>Pena Cumprida At\u00e9 a data atual:</td>');
 					oDoc.write('		<td class="paragrafo08" nowrap>' + document.getElementById('anoMesDiaPenaCumpridaDataAtual').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo07" nowrap>Pena Restante a partir da data atual:</td>');
 					oDoc.write('		<td class="paragrafo08" nowrap>' + document.getElementById('anoMesDiaPenaRestanteDataAtual').innerHTML + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					
 					// inicio pablo
 					oDoc.write('	<tr>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
+					oDoc.write('		');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="tituloSubBSecao" nowrap>COMUTA&Ccedil;&Atilde;O E INDULTO</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="3" width="100%"> ');
@@ -5831,17 +5830,17 @@
 					// fim pablo
 					
 					oDoc.write('	<tr>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
+					oDoc.write('		');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="tituloSubBSecao" style="font-family: Courier-New, monospace" nowrap>&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td colspan="2" class="paragrafo02" nowrap>Observa\u00e7\u00e3o:</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 
 
@@ -5851,23 +5850,23 @@
 					{
 						oDoc.write('	<tr>');
 						oDoc.write('		<td colspan="2" class="paragrafo02" style="font-family: Courier-New, monospace" nowrap>' + listaLinha[i] + '</td>');
-						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		');
 						oDoc.write('	</tr>');
 					}
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo02" nowrap>Data:</td>');
 					oDoc.write('		<td class="paragrafo02" nowrap>' + document.calculoPena.dataDocumento.value + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo02" nowrap>Elaborado Por:</td>');
 					oDoc.write('		<td class="paragrafo02">' + document.calculoPena.nomeDonoDocumento.value + '</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('	<tr>');
 					oDoc.write('		<td class="paragrafo01">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
-					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		');
+					oDoc.write('		');
 					oDoc.write('	</tr>');
 					oDoc.write('</table>');
 
@@ -6339,7 +6338,7 @@
 	</head>
 	<body class="corpo" onload="javascript:limparCampos(false);">
 
-        <div class="notice"><b>Aviso</b>: este é um arquivo de 19/08/2019 da página original disponível em <a href="http://www.cnj.jus.br/sistema-carcerario-e-execucao-penal/calculadora-de-execucao-penal">http://www.cnj.jus.br/sistema-carcerario-e-execucao-penal/calculadora-de-execucao-penal</a>. Todos os direitos pertencem aos autores originais.</div>
+        <div class="notice"><b>Aviso</b>: esta é uma adaptação não oficial da calculadora originalmente disponível em <a href="http://www.cnj.jus.br/sistema-carcerario-e-execucao-penal/calculadora-de-execucao-penal">http://www.cnj.jus.br/sistema-carcerario-e-execucao-penal/calculadora-de-execucao-penal</a>. A lista dos autores originais pode ser encontrada na página de <a href="ajuda.html">ajuda</a>.</div>
 
 		<iframe id="ifrmPrint" src="#" style="width:0px; height:0px;"></iframe>
 
@@ -6350,13 +6349,12 @@
 				<input type="hidden" name="diaPenaTotal" id="diaPenaTotal">
 				<table>
 					<tbody><tr>
-						<!--<th rowspan="3"><img src="/image/image_gallery?img_id=1835785&amp;t=1289562184678" alt="Conselho Nacional de Justi&ccedil;a"/></th>-->
-						<th rowspan="3"><img src="./index_files/logomarca_cnj.png" alt="Conselho Nacional de Justiça"></th>
-						<td width="40%" nowrap="" style="font-size: 200%;text-align: center;font-weight: bold; font-family: calibri;">CALCULADORA DE EXECUÇÃO PENAL</td>
+						<th rowspan="3"></th>
+						<td width="40%" nowrap="" style="font-size: 200%;font-weight: bold; font-family: calibri;">CALCULADORA DE EXECUÇÃO PENAL</td>
 						<td width="20%">&nbsp;</td>
 					</tr>
 					<tr>
-						<td width="40%" nowrap="" style="font-size: 120%;text-align: center;font-weight: bold; font-family: calibri;">Departamento de Monitoramento e Fiscalização do Sistema<br>Carcerário e do Sistema de Execução de Medidas Socioeducativas - DMF</td>
+						<td width="40%" nowrap="" style="font-size: 120%;text-align: center;font-weight: bold; font-family: calibri;"></td>
 						<td width="40%">&nbsp;</td>
 						<td width="20%">&nbsp;</td>
 					</tr>
@@ -6382,11 +6380,10 @@
 					<tr>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
-						<td width="100%">&nbsp;</td>
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">DADOS GERAIS</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6395,7 +6392,7 @@
 							<input class="formularios" name="numeroExecucao" id="numeroExecucao" type="text" value="" size="40" maxlength="40" onkeypress="return(validaConteudo(event, this, &#39;numeric&#39;))" onchange="atualizarNumeroExecucao(this);">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o número identificador do réu.&lt;br&gt;Este campo é apenas para fins de impressão.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Nome do Apenado:</td>
@@ -6403,7 +6400,7 @@
 							<input class="formularios" name="nomeSentenciado" id="nomeSentenciado" type="text" size="50" maxlength="50" value="" onchange="javascript:atualizarNomeSentenciado(this);">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o nome do réu.&lt;br&gt;Este campo é apenas para fins de impressão.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6413,7 +6410,7 @@
 							<a href="javascript:adicionarCampoCondenacao(&#39;campoCondenacao&#39;)">Adicionar Condenação</a>
 							<span href="#" onmouseover="mostrarHint(&#39;Adicione todas as condenações referentes ao réu.&#39;, this, event, &#39;415px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01">&nbsp;</td>
@@ -6436,7 +6433,7 @@
 										<td class="paragrafo02">Livramento Condicional
 											<span href="#" onmouseover="mostrarHint(&#39;Informe a fração aplicada referente a livramento condicional para esta condenação.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 										</td>
-										<td class="paragrafo02">&nbsp;</td>
+										
 									</tr>
 								</thead>
 								<tbody id="tabelaCorpoCondenacao">
@@ -6477,7 +6474,7 @@
 								</tbody>
 							</table>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Detrações:</td>
@@ -6486,7 +6483,7 @@
 							<a href="javascript:adicionarCampoDetracaoInterrupcao(&#39;campoDetracao&#39;)">Adicionar Campos de Detração</a>
 							<span href="#" onmouseover="mostrarHint(&#39;Clique neste link para adicionar as detrações do réu.&lt;br&gt;Podem ser adicionadas tantas detrações quantas forem necessárias.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="linhaDetracao_0">
 						<td class="paragrafo01" nowrap="">&nbsp;</td>
@@ -6495,7 +6492,7 @@
 							<input class="botao" type="button" name="botaoExcluirDetracao_0" id="botaoExcluirDetracao_0" value="Excluir" onclick="javascript:excluirCampoDetracaoInterrupcao(this);">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o(s) período(s) de detração no formato dia/mês/ano. A detração corresponde ao período em que o réu ficou preso provisoriamente.&lt;br&gt;Clique no botão Excluir para remover uma detração já informada.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="campoDetracao">
 						<td class="paragrafo01" nowrap="">Data da Prisão Definitiva:</td>
@@ -6503,7 +6500,7 @@
 							<input class="formularioObrigatorio" id="dataPrisaoDefinitiva" name="dataPrisaoDefinitiva" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event, this, &#39;numeric&#39;))" onblur="formatCamp(this, &#39;date&#39;);" onchange="javascript:atualizarDataPrisaoDefinitiva(this);" onfocus="removeCaracs(this,&#39;date&#39;)">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe a data em que o sentenciado iniciou efetivamente o cumprimento da pena no regime aberto ou a data da prisão definitiva nos regimes semiaberto e fechado.&lt;br&gt;&lt;b&gt;Obs.:&lt;/b&gt; Eventuais períodos de recolhimento cautelar anteriores ao efetivo início de cumprimento deverão ser computados como detração.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Interrupções:</td>
@@ -6512,7 +6509,7 @@
 							<a href="javascript:adicionarCampoDetracaoInterrupcao(&#39;campoInterrupcao&#39;)">Adicionar Campos de Interrupção</a>
 							<span href="#" onmouseover="mostrarHint(&#39;Clique neste link para adicionar as interrupções do réu.&lt;br&gt;Podem ser adicionadas tantas interrupções quantas forem necessárias.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr id="linhaInterrupcao_0">
@@ -6522,7 +6519,7 @@
 							<input class="botao" type="button" name="botaoExcluirInterrupcao_0" id="botaoExcluirInterrupcao_0" value="Excluir" onclick="javascript:excluirCampoDetracaoInterrupcao(this);">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o(s) período(s) de interrupção no formato dia/mês/ano. Estes períodos de interrupção devem ser posteriores à data de início de seu cumprimento.&lt;br&gt;&lt;b&gt;Exemplos:&lt;/b&gt; período foragido (fuga/recaptura), período de livramento condicional perdido (liberdade do LC/prisão), etc.&lt;br&gt;Clique no botão Excluir para remover uma interrupção já informada.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="campoInterrupcao">
 						<td class="paragrafo01" nowrap="">Remições:</td>
@@ -6531,7 +6528,7 @@
 							<a href="javascript:adicionarCampoRemicao(&#39;campoRemicao&#39;)">Adicionar Campos de Remição</a>
 							<span href="#" onmouseover="mostrarHint(&#39;Clique neste link para adicionar as remições do réu.&lt;br&gt;Podem ser adicionadas tantas remições quantas forem necessárias.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="linhaRemicao_0">
 						<td class="paragrafo01" nowrap="">&nbsp;</td>
@@ -6539,16 +6536,16 @@
 							<input class="formularios" id="remicao_0" name="remicao_0" type="text" size="5" maxlength="5" value="" onkeypress="return(validaConteudo(event, this, &#39;numeric&#39;))" onchange="javascript:atualizarListaRemicao(this)"><input class="formularioObrigatorio" name="consideraRemicaoParaProgressao_0" id="consideraRemicaoParaProgressao_0" type="checkbox" checked="" onclick="javascript:atualizarListaRemicao(this);">Considerar para Progressão de Regime<input class="botao" type="button" name="botaoExcluirRemicao_0" id="botaoExcluirRemicao_0" value="Excluir" onclick="javascript:excluirCampoRemicao(this);">
 							<span href="#" onmouseover="mostrarHint(&#39;Informe os dias efetivamente declarados remidos por trabalho ou estudo.&lt;br&gt;Clique no botão Excluir para remover uma remição já informada.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="campoRemicao">
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">PARA PROGRESSÃO DE REGIME</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Regime Atual:</td>					
@@ -6560,7 +6557,7 @@
 							</select>
 							<span href="#" onmouseover="mostrarHint(&#39;Selecione um dos itens: &lt;span style=\&#39;color:blue\&#39;&gt;Fechado, Semiaberto ou Aberto&lt;/span&gt;, indicando qual e´ o regime atual que o sentenciado está cumprindo.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime1">
 						<td class="paragrafo01">&nbsp;</td>
@@ -6568,7 +6565,7 @@
 							<input class="formularioObrigatorio" id="detracaoAntesFracao" name="detracaoAntesFracao" type="checkbox" onclick="javascript:atualizarDetracaoAntesFracao(this)">Considerar Detrações para a Redução da Pena Imposta
 							<span href="#" onmouseover="mostrarHint(&#39;Se selecionado, a detração será reduzida do total da Pena Imposta e deste resultado será calculado o prazo para a progressão de regime.&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Exemplo: Data-base=01/01/2000; Pena Total=4a6m0d; Detração=0a6m0d.&lt;br&gt;Fração: (4a6m0d - 0a6m0d) * 1/6 = 4a0m0d * 1/6 (Comum) = 0a8m0d&lt;br&gt;Data do requisito temporal: 01/01/2000+0a8m0d = 30/08/2000 &lt;/span&gt;&lt;br&gt;&lt;br&gt;Se desmarcado, será calculada a data da progressão de regime e deste resultado serão descontados os dias de detração.&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Exemplo: Data-base=01/01/2000; Pena Total=4a6m0d; Total dias detração=0a6m0d.&lt;br&gt;Fração: (4a6m0d * 1/6 (Comum)) = 0a9m0d &lt;br&gt;Data do requisito temporal: 01/01/2000+0a9m0d = 01/10/2000-0a6m0d = 03/04/2000&#39;, this, event, &#39;300px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime2">
 						<td class="paragrafo01" nowrap="">Data-base:</td>
@@ -6577,27 +6574,27 @@
 							<span href="#" onmouseover="mostrarHint(&#39;Informe a data-base a ser levada em consideração para o cálculo da Progressão de Regime.&lt;br&gt;Pode ser a data da &lt;span style=\&#39;color:blue\&#39;&gt;Prisão, última Falta Grave ou última Progressão.&lt;br&gt;Para não considerar pena cumprida na detração para fins de progressão, favor colocar a data da primeira prisão provisória.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime3">
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr id="progressaoRegime4">
 						<td class="paragrafo03" nowrap="">Pena Cumprida = </td>
 						<td class="paragrafo04" nowrap=""><label id="penaCumprida"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime5">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="detalheCalculoPenaCumprida"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime6">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="detalheCalculoPenaCumprida2"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime7">
 						<td class="paragrafo01" nowrap="">Pena Cumprida até a Data-base:</td>
@@ -6607,17 +6604,17 @@
 							<input class="formularios" name="diaPenaCumprida" id="diaPenaCumprida" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;O sistema calculará automaticamente o tempo de pena já cumprida em anos, meses e dias, computando os períodos de detração, interrupção e remição.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime8">
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr id="progressaoRegime9">
 						<td class="paragrafo03" nowrap="">Cálculo da Fração = </td>
 						<td class="paragrafo04" nowrap="">(Pena Imposta - Pena Cumprida) * Fração</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime10">
 						<td class="paragrafo01" nowrap="">1/6</td>
@@ -6632,7 +6629,7 @@
 							<input class="formularios" name="diaPenaImpostaParcial16PR" id="diaPenaImpostaParcial16PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes dos tipos:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Comum Primário, Comum Reincidente, Hediondo (antes de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime12">
 						<td class="paragrafo01" nowrap="">Pena Cumprida:</td>
@@ -6642,12 +6639,12 @@
 							<input class="formularios" name="diaPenaCumpridaParcial16PR" id="diaPenaCumpridaParcial16PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Cumpridas&lt;/b&gt; para os crimes dos tipos:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Comum Primário, Comum Reincidente, Hediondo (antes de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime13">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao16PR"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime14">
 						<td class="paragrafo01" nowrap="">2/5</td>
@@ -6662,7 +6659,7 @@
 							<input class="formularios" name="diaPenaImpostaParcial25PR" id="diaPenaImpostaParcial25PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo Primário (a partir de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime16">
 						<td class="paragrafo01" nowrap="">Pena Cumprida:</td>
@@ -6672,12 +6669,12 @@
 							<input class="formularios" name="diaPenaCumpridaParcial25PR" id="diaPenaCumpridaParcial25PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Cumpridas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo Primário (a partir de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime17">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao25PR"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime18">
 						<td class="paragrafo01" nowrap="">3/5</td>
@@ -6692,7 +6689,7 @@
 							<input class="formularios" name="diaPenaImpostaParcial35PR" id="diaPenaImpostaParcial35PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo Reincidente (a partir de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime20">
 						<td class="paragrafo01" nowrap="">Pena Cumprida:</td>
@@ -6702,17 +6699,17 @@
 							<input class="formularios" name="diaPenaCumpridaParcial35PR" id="diaPenaCumpridaParcial35PR" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Cumpridas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo Reincidente (a partir de 29/03/2007)&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime21">
-						<td class="paragrafo04">&nbsp;</td>
+						
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao35PR"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime22">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label>______________________</label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime23">
 						<td class="paragrafo03" nowrap=""><label>Somatório das Penas Impostas =</label></td>
@@ -6720,7 +6717,7 @@
 							<label id="somatorioFracaoImpostaPR"></label>&nbsp;&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;O somatório das Penas &lt;b&gt;Impostas&lt;/b&gt; para a Progressão de Regime deve ser igual ao total indicado no campo &lt;b&gt;Penas&lt;/b&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime24">
 						<td class="paragrafo03" nowrap=""><label>Somatório das Penas Cumpridas =</label></td>
@@ -6728,12 +6725,12 @@
 							<label id="somatorioFracaoCumpridaPR"></label>&nbsp;&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;O somatório das Penas &lt;b&gt;Cumpridas&lt;/b&gt; para a Progressão de Regime deve ser igual ao total indicado no campo &lt;b&gt;Pena Cumprida até a Data-base&lt;/b&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime25">
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr id="progressaoRegime26">
 						<td class="paragrafo03" nowrap="">Fórmula do Requisito Temporal = </td>
@@ -6741,26 +6738,26 @@
 							<label id="formulaRequisitoPR">Data-base + Soma das Frações + Interrupção* - Detração* - Remição* - 1 dia</label>
 							<span href="#" onmouseover="mostrarHint(&#39;Detração, e interrupção podem ser iguais a zero se estas forem consideradas no cálculo da pena cumprida acima&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>							
 						</td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime27">
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="detalheCalculoPR"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr id="progressaoRegime28">
 						<td class="paragrafo06" nowrap="">Data do Requisito Temporal:</td>
 						<td class="paragrafo02" nowrap=""><label class="paragrafo07" id="dataRequisitoTemporalPR"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">PARA LIVRAMENTO CONDICIONAL</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Data-base:</td>
@@ -6768,7 +6765,7 @@
 							<input class="formularios" name="dataBaseLC" id="dataBaseLC" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event, this, &#39;numeric&#39;))" onblur="return(formatCamp(this, &#39;date&#39;))" onfocus="removeCaracs(this,&#39;date&#39;)" onchange="javascript:atualizarDataBaseLC(this);"> 
 							<span href="#" onmouseover="mostrarHint(&#39;Informe a data-base a ser levada em consideração para o cálculo do Livramento Condicional.&lt;br&gt;Na maioria dos casos é a data da &lt;span style=\&#39;color:blue\&#39;&gt;Primeira prisão&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Comum Primário (1/3):</td>
@@ -6778,12 +6775,12 @@
 							<input class="formularios" name="diaPenaImpostaParcial13LC" id="diaPenaImpostaParcial13LC" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Comum Primário&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao13LC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6794,13 +6791,13 @@
 							<input class="formularios" name="diaPenaImpostaParcial12LC" id="diaPenaImpostaParcial12LC" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Comum Reincidente&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao12LC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6811,12 +6808,12 @@
 							<input class="formularios" name="diaPenaImpostaParcial23LC" id="diaPenaImpostaParcial23LC" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao23LC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6827,12 +6824,12 @@
 							<input class="formularios" name="diaPenaImpostaParcial11LC" id="diaPenaImpostaParcial11LC" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para os crimes do tipo:&lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Hediondo Reincidente&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracao11LC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
@@ -6843,19 +6840,19 @@
 							<input class="formularios" name="diaPenaImpostaParcialRVLC" id="diaPenaImpostaParcialRVLC" readonly="true" type="text" size="2" maxlength="2" value="">d&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;Informe o total de Penas &lt;b&gt;Impostas&lt;/b&gt; para crimes com &lt;br&gt;&lt;span style=\&#39;color:blue\&#39;&gt;Revogação de Livramento Condicional&lt;/span&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="calculoFracaoRVLC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label>______________________</label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap=""><label>Somatório das Penas Parciais:</label></td>
@@ -6863,73 +6860,73 @@
 							<label id="somatorioFracaoImpostaLC"></label>&nbsp;&nbsp;
 							<span href="#" onmouseover="mostrarHint(&#39;O somatório das Penas &lt;b&gt;Impostas&lt;/b&gt; para o Livramento Condicional deve ser igual ao total indicado no campo &lt;b&gt;Penas&lt;/b&gt;.&#39;, this, event, &#39;250px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">Fórmula do Requisito Temporal:</td>
 						<td class="paragrafo04" nowrap=""><label id="formulaRequisitoLC">Data-base + Soma das Frações + Interrupção - Detração - Remição - 1 dia</label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="detalheCalculoLC"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo06" nowrap="">Data do Requisito Temporal:</td>
 						<td class="paragrafo02" nowrap=""><label class="paragrafo07" id="dataRequisitoTemporalLC"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">TÉRMINO DA PENA</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">Fórmula do Requisito Temporal = </td>
 						<td class="paragrafo04" nowrap=""><label id="formulaRequisitoTerminoPena">Data Início de Cumprimento + Pena Total + Interrupção - Detração - Remição - 1 dia</label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo03" nowrap="">&nbsp;</td>
 						<td class="paragrafo04" nowrap=""><label id="detalheCalculoTerminoPena"></label></td>
-						<td class="paragrafo04">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
 						<td class="paragrafo06" nowrap="">Data do Término da Pena:</td>
 						<td class="paragrafo02" nowrap=""><label class="paragrafo07" name="dataProvavelTerminoPena" id="dataProvavelTerminoPena"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo06" nowrap="">Pena Cumprida até a data atual:</td>
 						<td class="paragrafo02" nowrap=""><label class="paragrafo07" name="anoMesDiaPenaCumpridaDataAtual" id="anoMesDiaPenaCumpridaDataAtual"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo06">Pena Remanescente a partir da data atual:</td>
 						<td class="paragrafo02" nowrap=""><label class="paragrafo07" name="anoMesDiaPenaRestanteDataAtual" id="anoMesDiaPenaRestanteDataAtual"></label></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td class="tituloSubBSecao" colspan="2" nowrap="">
@@ -6937,42 +6934,42 @@
 							<a href="javascript:mostrarOculto()">(Mostrar/Ocultar)</a>
 							<span href="#" onmouseover="mostrarHint(&#39;Clique para Mostar/Ocultar a Indulto/Comutação dos eventos criminais após calcular a pena.&#39;, this, event, &#39;415px&#39;)"><img width="15px" height="15px" src="./index_files/ajuda.png"></span>							
 						</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>					
 					<tr>
 						<td class="paragrafo02" colspan="2">
 							<div id="linhaTempo" style="display:none"></div></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
+						
+						
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
 						<td class="paragrafo01" nowrap="">Observação:</td>
 						<td class="paragrafo02" nowrap=""><textarea class="formularios" name="observacaoDocumento" id="observacaoDocumento" value="" cols="115" rows="5"></textarea></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 
 					<tr>
 						<td class="paragrafo01" nowrap="">Data:</td>
 						<td class="paragrafo02" nowrap=""><input class="formularios" name="dataDocumento" id="dataDocumento" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, &#39;date&#39;))" onfocus="removeCaracs(this,&#39;date&#39;)"></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td class="paragrafo01" nowrap="">Elaborado Por:</td>
 						<td class="paragrafo02"><input class="formularios" name="nomeDonoDocumento" type="text" size="50" maxlength="50" value=""></td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					<tr>
 						<td colspan="2" class="tituloSubBSecao" nowrap="">&nbsp;</td>
-						<td class="paragrafo02">&nbsp;</td>
+						
 					</tr>
 					</tbody>
 				</table>
